@@ -56,6 +56,7 @@ public class WeatherForecastController : ControllerBase
                 new ReportParameter("CollectedBy", "Abdul Hameed"),
                 new ReportParameter("Area", "Musaffah")
             });
+
             byte[] pdf = report.Render("PDF");
             return File(pdf, "application/pdf", "Receipt.pdf");
         }
